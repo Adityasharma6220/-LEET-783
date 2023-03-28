@@ -1,7 +1,6 @@
-package ArraysDemo;
-
+package in.ineuron.game;
 import java.util.Scanner;
-
+//Guesser Method calling
 class Guesser {
 	int guesNum;
 
@@ -9,11 +8,10 @@ class Guesser {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Guesser kindly guess the no");
 		guesNum = sc.nextInt();
-		sc.close();
 		return guesNum;
 	}
 }
-
+//Player method Calling
 class Player {
 	int guesNum;
 
@@ -22,7 +20,6 @@ class Player {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Players kindly guess the no");
 		guesNum = sc.nextInt();
-		sc.close();
 		return guesNum;
 	}
 }
@@ -59,7 +56,12 @@ class Umpire {
 
 			}
 		} else if (numFromGuesser == numFromPlayer2) {
-			System.out.println("Player 2 won the match");
+			if (numFromGuesser==numFromPlayer3) {
+				System.out.println("2 & 3 won the match");
+			}
+			else {
+				System.out.println("Player 2 won the match");				
+			}
 		} else if (numFromGuesser == numFromPlayer3) {
 
 			System.out.println("Player 3 won the match");
@@ -70,7 +72,7 @@ class Umpire {
 	}
 	}
 
-public class LaunchGame {
+public class GuesserGameApp {
 
 	public static void main(String[] args) {
 		Umpire u = new Umpire();
@@ -80,3 +82,5 @@ public class LaunchGame {
 	}
 
 }
+
+
